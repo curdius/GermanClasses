@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,6 +15,11 @@
       color: white;
       padding: 20px;
       margin: 0;
+    }
+    .counters{
+      font-size: 18px;
+      padding: 20px;
+      padding-left: 0px;
     }
     #prompt {
       font-size: 18px;
@@ -56,12 +58,17 @@
 </head>
 <body>
 <div style="margin-left: 20px;">
-  <h1>Articles and Plural</h1>
+  <h1>Articles and Plural  - <span id ="timer"></span></h1>
   <div style="text-align: left;" id="prompt"></div>
     <input type="text" id="answerInput" size="50" placeholder="Enter your answer">
     <button type="button" id="submitButton">Submit</button>
-  </div>
+
   <div id="message"></div>
+  <br><br>
+  <span class="counters" id="rightinarow"></span> Rigth in a row<BR>
+  <span  class="counters"id="rigth"></span> Rigth<BR>
+  <span  class="counters"id="wrong"></span> Wrong
+  </div>
 
   <script src="Plural.js"></script>
 </body>

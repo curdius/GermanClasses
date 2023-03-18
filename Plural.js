@@ -107,10 +107,26 @@ const prompts = [
 
 let currentPrompt;
 let numCorrect = 0;
+let rigthAnswers=0;
+let wrongAnswers=0;
+
+const rigthInARowField =document.getElementById('rightinarow');
+const rigthAnswersField =document.getElementById('rigth');
+const wrongAnswersField =document.getElementById('wrong');
+rigthInARowField.textContent = 0;
+rigthAnswersField.textContent = 0;
+wrongAnswersField.textContent = 0;
+
+let timeoutId;
+let timerInterval;
+
+let time2Answer = 30;
+let MaxQuestions = 20;
+
 
 function showPrompt() {
-  if (numCorrect === 5) {
-    alert("Congratulations! You've answered all the questions.");
+  if (numCorrect === MaxQuestions) {
+    alert("Congratulations! You got " + MaxQuestions + " questions in a row right!");
     document.location.URL ="google.com"
     return;
   }
@@ -121,45 +137,77 @@ function showPrompt() {
 
   const promptElement = document.getElementById("prompt");
   promptElement.innerHTML = "Give me the singular and plural (with articles) of <B> " + currentPrompt[1] + "</B> for example:<I> der computer die computer</I>";
+
+   // set a timeout of 5 seconds
+  const endTime = Date.now() + (time2Answer *1000);
+
+   timeoutId = setTimeout(() => {
+    // do something when the timeout expires
+      numCorrect = 0;
+     showMessage("error", `Too slow! Time's up! You only have ` + time2Answer + ` secs`);
+      showPrompt();
+  }, time2Answer *1000);
+
+  // display the time remaining
+  let timerElement = document.getElementById('timer'); // replace 'timer' with the ID of your timer element
+   timerInterval = setInterval(() => {
+    const remainingTime = Math.max(0, endTime - Date.now());
+    const seconds = Math.floor(remainingTime / 1000);
+    timerElement.textContent = `${seconds} second${seconds === 1 ? '' : 's'} left`;
+  }, 1000);
+
 }
 
 function showMessage(type, message) {
   const messageElement = document.getElementById("message");
-  messageElement.textContent = message;
+  messageElement.innerHTML = message;
   messageElement.className = type;
-  //setTimeout(() => {
-   // messageElement.textContent = "";
-    //messageElement.className = "";
-  //}, 8000);
+   setTimeout(() => {
+    messageElement.textContent = "";
+    messageElement.className = "";
+  }, 2000);
 }
 
 
 function submitAnswer() {
+  clearInterval(timerInterval);
+  clearTimeout(timeoutId);
+
   const answerInput = document.getElementById("answerInput");
   const userAnswer = answerInput.value.trim().toLowerCase();
 
   if (userAnswer === currentPrompt[0].toLowerCase() + " " + currentPrompt[1].toLowerCase() + " " + currentPrompt[3].toLowerCase() + " " + currentPrompt[4].toLowerCase()) {
-    numCorrect++;
+      numCorrect++;
+      rigthInARowField.textContent = numCorrect;
 
-  answerInput.value = "";
-  answerInput.focus();
-
-    if (numCorrect === 5) {
-      alert("Congratulations! You got 20 questions in a row right!");
-    } else {
       answerInput.value = "";
       answerInput.focus();
-      showMessage("success", "Correct! Keep going...");
-      showPrompt();
 
-    }
-  } else {
-    answerInput.value = "";
-    answerInput.focus();
-    numCorrect = 0;
-    showMessage("error", `Sorry, that's incorrect. The correct answer is "${currentPrompt[0]} ${currentPrompt[1]} ${currentPrompt[3]} ${currentPrompt[4]}".`);
-    showPrompt();
-  }
+        if (numCorrect === MaxQuestions) {
+          alert("Congratulations! You got " + MaxQuestions + " questions in a row right!");
+        } else {
+          answerInput.value = "";
+          answerInput.focus();
+          showMessage("success", "Correct! Keep going...");
+          showPrompt();
+
+        }
+        rigthAnswers++;
+        rigthAnswersField.textContent=rigthAnswers;
+      } else {
+        answerInput.value = "";
+        answerInput.focus();
+
+        numCorrect = 0;
+        rigthInARowField.textContent = numCorrect;
+
+        wrongAnswers++;
+        wrongAnswersField.textContent=wrongAnswers;
+
+
+        showMessage("error", `Sorry, that's incorrect. The correct answer is <B>"${currentPrompt[0]} ${currentPrompt[1]} ${currentPrompt[3]} ${currentPrompt[4]}"</B>.`);
+        showPrompt();
+      }
 
 }
 
