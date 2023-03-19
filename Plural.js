@@ -27,7 +27,7 @@ const prompts = [
   [ "der", "kaffee", "3", "die", "Kaffees" ],
   [ "die", "pizza", "3", "die", "pizzas" ],
   [ "der", "name", "4", "die", "namen" ],
-  [ "die", "schokolade", "4", "die", "schokoladen" ],
+  [ "die", "Schokolade", "4", "die", "Schokoladen" ],
   [ "die", "techknik", "4", "die", "techkniken" ],
   [ "die", "mode", "4", "die", "moden" ],
   [ "der", "familienname", "4", "die", "familiennamen" ],
@@ -76,7 +76,7 @@ const prompts = [
   [ "die", "flasche", "4", "die", "flaschen" ],
   [ "die", "tafel", "4", "die", "tafeln" ],
   [ "die", "tasse", "4", "die", "tassen" ],
-  [ "die", "jack", "4", "die", "jacken" ],
+  [ "die", "jacke", "4", "die", "jacken" ],
   [ "die", "tür", "4", "die", "türen" ],
   [ "die", "brille", "4", "die", "brillen" ],
   [ "die", "uhr", "4", "die", "uhren" ],
@@ -94,16 +94,37 @@ const prompts = [
   [ "der", "Ladekebel", "1", "die", "Ladekebel" ],
   [ "der", "USB-Stick", "1", "die", "USB-Sticks" ],
   [ "die", "Batterie", "1", "die", "Batterien" ],
-  [ "die", "Handyhulle", "1", "die", "Handyhullen" ],
+  [ "die", "Handyhülle", "1", "die", "Handyhüllen" ],
   [ "die", "Hose", "1", "die", "Hosen" ],
   [ "der", "Hut", "1", "die", "Hüte" ],
   [ "das", "Kleid", "1", "die", "Kleider" ],
-  [ "die", "Kette", "1", "die", "Ketteer" ],
+  [ "die", "Kette", "1", "die", "Ketten" ],
   [ "der", "Ring", "1", "die", "Ringe" ],
   [ "der", "Lippenstift", "1", "die", "Lippenstifte" ],
   [ "der", "Koffer", "1", "die", "Koffer" ],
   [ "der", "Schuh", "1", "die", "Schuhe" ]
 ];
+
+const newprompts = [
+  [ "das", "Ding", "5", "die", "Dinge" ],
+  [ "das", "Jahr", "5", "die", "Jahre" ],
+  [ "der", "Sport", "5", "die", "Sporte" ],
+  [ "das", "Kleid", "1", "die", "Kleider" ],
+  [ "der", "Ladekebel", "1", "die", "Ladekebel" ],
+  [ "der", "USB-Stick", "1", "die", "USB-Sticks" ],
+  [ "der", "Ring", "1", "die", "Ringe" ],
+  [ "der", "Lippenstift", "1", "die", "Lippenstifte" ],
+  [ "der", "Koffer", "1", "die", "Koffer" ],
+  [ "der", "Schuh", "1", "die", "Schuhe" ],
+  [ "der", "Hut", "1", "die", "Hüte" ],
+  [ "die", "Batterie", "1", "die", "Batterien" ],
+  [ "die", "Handyhülle", "1", "die", "Handyhüllen" ],
+  [ "die", "Hose", "1", "die", "Hosen" ],
+  [ "die", "Kette", "1", "die", "Ketten" ]
+
+];
+
+let workingPrompts = prompts;
 
 let currentPrompt;
 let numCorrect = 0;
@@ -113,9 +134,14 @@ let wrongAnswers=0;
 const rigthInARowField =document.getElementById('rightinarow');
 const rigthAnswersField =document.getElementById('rigth');
 const wrongAnswersField =document.getElementById('wrong');
+const newornotnewlabel = document.getElementById('newornotnewlabel');
+
+
 rigthInARowField.textContent = 0;
 rigthAnswersField.textContent = 0;
 wrongAnswersField.textContent = 0;
+newornotnewlabel.textContent="All ";
+
 
 let timeoutId;
 let timerInterval;
@@ -131,8 +157,8 @@ function showPrompt() {
     return;
   }
 
-  const randomIndex = Math.floor(Math.random() * prompts.length);
-  currentPrompt = prompts[randomIndex];
+  const randomIndex = Math.floor(Math.random() * workingPrompts.length);
+  currentPrompt = workingPrompts[randomIndex];
  // prompts.splice(randomIndex, 1);
 
   const promptElement = document.getElementById("prompt");
@@ -166,6 +192,21 @@ function showMessage(type, message) {
     messageElement.textContent = "";
     messageElement.className = "";
   }, 2000);
+}
+
+function tooglenewWordsButton()
+{
+  if (newWordsButton.textContent=="Only New words")
+  {
+      newornotnewlabel.textContent="Only new ";
+      newWordsButton.textContent = "All Words";
+      workingPrompts = newprompts;
+  } else 
+  {
+      newornotnewlabel.textContent="All ";
+      newWordsButton.textContent = "Only New words";
+      workingPrompts = prompts;
+  }
 }
 
 
@@ -214,11 +255,16 @@ function submitAnswer() {
 document.addEventListener("DOMContentLoaded", () => {
   const submitButton = document.getElementById("submitButton");
   submitButton.addEventListener("click", submitAnswer);
+  const newWordsButtons = document.getElementById('newWordsButton');
+  newWordsButtons.addEventListener("click", tooglenewWordsButton);
+
 
   showPrompt();
 });
+
 const textBox = document.getElementById('answerInput');
 const submitButton = document.getElementById('submitButton');
+const newWordsButton = document.getElementById('newWordsButton');
 
 textBox.addEventListener('keydown', function(event) {
   if (event.key === 'Enter') {
