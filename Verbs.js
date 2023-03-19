@@ -238,7 +238,12 @@ function showPrompt() {
           
             wrongAnswers++;
             wrongAnswersField.textContent=wrongAnswers;
-        showMessage("error", `Too slow! Time's up! You only have 15 secs`);
+
+  clearInterval(timerInterval);
+  clearTimeout(timeoutId);
+
+
+        showMessage("error", `Too slow! Time's up! You only have ` + time2Answer + ` secs`);
           showPrompt();
       }, time2Answer *1000);
 
