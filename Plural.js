@@ -280,4 +280,12 @@ textBox.addEventListener('keydown', function(event) {
     submitButton.click();
   }
 });
+
+window.addEventListener('beforeunload', function (event) {
+  clearInterval(timerInterval);
+  clearTimeout(timeoutId);
+  event.preventDefault();
+  event.returnValue = '';
+});
+
 textBox.focus();

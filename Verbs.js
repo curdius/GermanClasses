@@ -348,6 +348,13 @@ textBox.addEventListener('keydown', function(event) {
   }
 });
 
+window.addEventListener('beforeunload', function (event) {
+  clearInterval(timerInterval);
+  clearTimeout(timeoutId);
+  event.preventDefault();
+  event.returnValue = '';
+});
+
 textBox.focus();
 
 
