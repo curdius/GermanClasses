@@ -233,8 +233,12 @@ function showPrompt() {
 
        timeoutId = setTimeout(() => {
         // do something when the timeout expires
-          numCorrect = 0;
-         showMessage("error", `Too slow! Time's up! You only have 15 secs`);
+            numCorrect = 0;
+            rigthInARowField.textContent = numCorrect;
+          
+            wrongAnswers++;
+            wrongAnswersField.textContent=wrongAnswers;
+        showMessage("error", `Too slow! Time's up! You only have 15 secs`);
           showPrompt();
       }, time2Answer *1000);
 
