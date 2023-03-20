@@ -27,7 +27,6 @@ const prompts = [
   [ "der", "kaffee", "3", "die", "Kaffees" ],
   [ "die", "pizza", "3", "die", "pizzas" ],
   [ "der", "name", "4", "die", "namen" ],
-  [ "die", "Schokolade", "4", "die", "Schokoladen" ],
   [ "die", "techknik", "4", "die", "techkniken" ],
   [ "die", "mode", "4", "die", "moden" ],
   [ "der", "familienname", "4", "die", "familiennamen" ],
@@ -91,7 +90,7 @@ const prompts = [
   [ "das", "Jahr", "5", "die", "Jahre" ],
   [ "die", "Adresse", "4", "die", "Adressen" ],
   [ "der", "Sport", "5", "die", "Sporte" ],
-  [ "der", "Ladekebel", "1", "die", "Ladekebel" ],
+  [ "das", "Ladekebel", "1", "die", "Ladekebel" ],
   [ "der", "USB-Stick", "1", "die", "USB-Sticks" ],
   [ "die", "Batterie", "1", "die", "Batterien" ],
   [ "die", "Handyhülle", "1", "die", "Handyhüllen" ],
@@ -108,20 +107,19 @@ const prompts = [
 const newprompts = [
   [ "das", "Ding", "5", "die", "Dinge" ],
   [ "das", "Jahr", "5", "die", "Jahre" ],
+  [ "das", "Kleid", "1", "die", "Kleider" ], //vestido
+  [ "das", "Ladekebel", "1", "die", "Ladekebel" ],
   [ "der", "Sport", "5", "die", "Sporte" ],
-  [ "das", "Kleid", "1", "die", "Kleider" ],
-  [ "der", "Ladekebel", "1", "die", "Ladekebel" ],
   [ "der", "USB-Stick", "1", "die", "USB-Sticks" ],
   [ "der", "Ring", "1", "die", "Ringe" ],
   [ "der", "Lippenstift", "1", "die", "Lippenstifte" ],
-  [ "der", "Koffer", "1", "die", "Koffer" ],
+  [ "der", "Koffer", "1", "die", "Koffer" ], //mala viagem
   [ "der", "Schuh", "1", "die", "Schuhe" ],
-  [ "der", "Hut", "1", "die", "Hüte" ],
+  [ "der", "Hut", "1", "die", "Hüte" ], //chapeu
   [ "die", "Batterie", "1", "die", "Batterien" ],
   [ "die", "Handyhülle", "1", "die", "Handyhüllen" ],
-  [ "die", "Hose", "1", "die", "Hosen" ],
-  [ "die", "Kette", "1", "die", "Ketten" ]
-
+  [ "die", "Hose", "1", "die", "Hosen" ], //calças
+  [ "die", "Kette", "1", "die", "Ketten" ] //colar
 ];
 
 let workingPrompts = prompts;
