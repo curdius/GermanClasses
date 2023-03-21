@@ -113,15 +113,41 @@ const prompts = [
   [ "brauchen", "Present", "wir", "brauchen" ],
   [ "brauchen", "Present", "ihr", "braucht" ],
   [ "brauchen", "Present", "sie/Sie", "brauchen" ],
+  [ "finden", "Present", "ich", "finde" ],
+  [ "finden", "Present", "du", "findest" ],
+  [ "finden", "Present", "er/sie/es", "findet" ],
+  [ "finden", "Present", "wir", "finden" ],
+  [ "finden", "Present", "ihr", "findet" ],
+  [ "finden", "Present", "sie/Sie", "finden" ],
+  [ "suchen", "Present", "ich", "suche" ],
+  [ "suchen", "Present", "du", "suchst" ],
+  [ "suchen", "Present", "er/sie/es", "sucht" ],
+  [ "suchen", "Present", "wir", "suchen" ],
+  [ "suchen", "Present", "ihr", "sucht" ],
+  [ "suchen", "Present", "sie/Sie", "suchen" ],
+  [ "kennen", "Present", "ich", "kenne" ],
+  [ "kennen", "Present", "du", "kennst" ],
+  [ "kennen", "Present", "er/sie/es", "kennt" ],
+  [ "kennen", "Present", "wir", "kennen" ],
+  [ "kennen", "Present", "ihr", "kennt" ],
+  [ "kennen", "Present", "sie/Sie", "kennen" ]
+];
+  /*,
   [ "müssen", "Present", "ich", "muss" ],
   [ "müssen", "Present", "du", "musst" ],
   [ "müssen", "Present", "er/sie/es", "muss" ],
   [ "müssen", "Present", "wir", "müssen" ],
   [ "müssen", "Present", "ihr", "müsst" ],
-  [ "müssen", "Present", "sie/Sie", "müssen" ]
-];
+  [ "müssen", "Present", "sie/Sie", "müssen" ]*/
+
 
 const newprompts = [
+  [ "gehen", "Present", "ich", "gehe" ],
+  [ "gehen", "Present", "du", "gehst" ],
+  [ "gehen", "Present", "er/sie/es", "geht" ],
+  [ "gehen", "Present", "wir", "gehen" ],
+  [ "gehen", "Present", "ihr", "geht" ],
+  [ "gehen", "Present", "sie/Sie", "gehen" ],
   [ "trinken", "Present", "ich", "trinke" ],
   [ "trinken", "Present", "du", "trinkst" ],
   [ "trinken", "Present", "er/sie/es", "trinkt" ],
@@ -182,12 +208,26 @@ const newprompts = [
   [ "brauchen", "Present", "wir", "brauchen" ],
   [ "brauchen", "Present", "ihr", "braucht" ],
   [ "brauchen", "Present", "sie/Sie", "brauchen" ],
-  [ "müssen", "Present", "ich", "muss" ],
-  [ "müssen", "Present", "du", "musst" ],
-  [ "müssen", "Present", "er/sie/es", "muss" ],
-  [ "müssen", "Present", "wir", "müssen" ],
-  [ "müssen", "Present", "ihr", "müsst" ],
-  [ "müssen", "Present", "sie/Sie", "müssen" ]
+  [ "finden", "Present", "ich", "finde" ],
+  [ "finden", "Present", "du", "findest" ],
+  [ "finden", "Present", "er/sie/es", "findet" ],
+  [ "finden", "Present", "wir", "finden" ],
+  [ "finden", "Present", "ihr", "findet" ],
+  [ "finden", "Present", "sie/Sie", "finden" ],
+  
+  [ "suchen", "Present", "ich", "suche" ],
+  [ "suchen", "Present", "du", "suchst" ],
+  [ "suchen", "Present", "er/sie/es", "sucht" ],
+  [ "suchen", "Present", "wir", "suchen" ],
+  [ "suchen", "Present", "ihr", "sucht" ],
+  [ "suchen", "Present", "sie/Sie", "suchen" ],
+  
+  [ "kennen", "Present", "ich", "kenne" ],
+  [ "kennen", "Present", "du", "kennst" ],
+  [ "kennen", "Present", "er/sie/es", "kennt" ],
+  [ "kennen", "Present", "wir", "kennen" ],
+  [ "kennen", "Present", "ihr", "kennt" ],
+  [ "kennen", "Present", "sie/Sie", "kennen" ]
 ];
 
 let workingPrompts = prompts;
