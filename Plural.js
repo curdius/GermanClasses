@@ -102,14 +102,16 @@ const prompts = [
   [ "der", "Hut", "1", "die", "Hüte" ], //chapeu
   [ "der", "Tipp", "1", "die", "Tipps" ], //Tip
   [ "der", "Traum", "1", "die", "Träume" ], //Sonho
-  [ "der", "Hafen", "1", "die", "Häfer" ], //Porto
+  [ "der", "Hafen", "1", "die", "Häfen" ], //Porto
   [ "der", "Mann", "1", "die", "Männer" ],
   [ "die", "Batterie", "1", "die", "Batterien" ],
   [ "die", "Handyhülle", "1", "die", "Handyhüllen" ],
   [ "die", "Hose", "1", "die", "Hosen" ], //calças
   [ "die", "Kette", "1", "die", "Ketten" ], //colar
   [ "die", "Sonnenbrille", "1", "die", "Sonnenbrillen" ], 
-  [ "die", "CD", "1", "die", "CDs" ]
+  [ "die", "CD", "1", "die", "CDs" ],
+    [ "das", "theater", "1", "die", "theater"]
+
 ];
 
 const newprompts = [
@@ -120,6 +122,7 @@ const newprompts = [
   [ "das", "Schiff", "1", "die", "Schiffe" ], //Ship
   [ "das", "Foto", "1", "die", "Fotos" ], 
   [ "das", "Smartphone", "1", "die", "Smartphones"],
+  [ "das", "theater", "1", "die", "theater"],
 
   [ "der", "Sport", "5", "die", "Sporte" ],
   [ "der", "USB-Stick", "1", "die", "USB-Sticks" ],
@@ -130,7 +133,7 @@ const newprompts = [
   [ "der", "Hut", "1", "die", "Hüte" ], //chapeu
   [ "der", "Tipp", "1", "die", "Tipps" ], //Tip
   [ "der", "Traum", "1", "die", "Träume" ], //Sonho
-  [ "der", "Hafen", "1", "die", "Häfer" ], //Porto
+  [ "der", "Hafen", "1", "die", "Häfen" ], //Porto
   [ "der", "Mann", "1", "die", "Männer" ],
 
   [ "die", "Batterie", "1", "die", "Batterien" ],
