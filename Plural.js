@@ -89,7 +89,7 @@ const prompts = [
   [ "das", "Ding", "5", "die", "Dinge" ],
   [ "das", "Jahr", "5", "die", "Jahre" ],
   [ "das", "Kleid", "1", "die", "Kleider" ], //vestido
-  [ "das", "Ladekebel", "1", "die", "Ladekebel" ],
+  [ "das", "Ladekabel", "1", "die", "Ladekabel" ],
   [ "das", "Schiff", "1", "die", "Schiffe" ], //Ship
   [ "das", "Foto", "1", "die", "Fotos" ], 
   [ "das", "Smartphone", "1", "die", "Smartphones"],
@@ -118,7 +118,7 @@ const newprompts = [
   [ "das", "Ding", "5", "die", "Dinge" ],
   [ "das", "Jahr", "5", "die", "Jahre" ],
   [ "das", "Kleid", "1", "die", "Kleider" ], //vestido
-  [ "das", "Ladekebel", "1", "die", "Ladekebel" ],
+  [ "das", "Ladekabel", "1", "die", "Ladekabel" ],
   [ "das", "Schiff", "1", "die", "Schiffe" ], //Ship
   [ "das", "Foto", "1", "die", "Fotos" ], 
   [ "das", "Smartphone", "1", "die", "Smartphones"],
