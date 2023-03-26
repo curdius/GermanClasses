@@ -256,47 +256,7 @@ const prompts = [
   ["geben", "Present", "er/sie/es", "gibt"],
   ["geben", "Present", "wir", "geben"],
   ["geben", "Present", "ihr", "gebt"],
-  ["geben", "Present", "sie/Sie", "geben"],
-
-  ["hören", "Present", "ich", "höre"],
-  ["hören", "Present", "du", "hörst"],
-  ["hören", "Present", "er/sie/es", "hört"],
-  ["hören", "Present", "wir", "hören"],
-  ["hören", "Present", "ihr", "hört"],
-  ["hören", "Present", "sie/Sie", "hören"],
-
-
-  ["wandern", "Present", "ich", "wandere"],
-  ["wandern", "Present", "du", "wanderst"],
-  ["wandern", "Present", "er/sie/es", "wandert"],
-  ["wandern", "Present", "wir", "wandern"],
-  ["wandern", "Present", "ihr", "wandert"],
-  ["wandern", "Present", "sie/Sie", "wandern"],
-
-
-  ["schwimmen", "Present", "ich", "schwimme"],
-  ["schwimmen", "Present", "du", "schwimmst"],
-  ["schwimmen", "Present", "er/sie/es", "schwimmt"],
-  ["schwimmen", "Present", "wir", "schwimmen"],
-  ["schwimmen", "Present", "ihr", "schwimmt"],
-  ["schwimmen", "Present", "sie/Sie", "schwimmen"],
-
-
-  ["kochen", "Present", "ich", "koche"],
-  ["kochen", "Present", "du", "kochst"],
-  ["kochen", "Present", "er/sie/es", "kocht"],
-  ["kochen", "Present", "wir", "kochen"],
-  ["kochen", "Present", "ihr", "kocht"],
-  ["kochen", "Present", "sie/Sie", "kochen"],
-
-
-
-  ["spielen", "Present", "ich", "spiele"],
-  ["spielen", "Present", "du", "spielst"],
-  ["spielen", "Present", "er/sie/es", "spielt"],
-  ["spielen", "Present", "wir", "spielen"],
-  ["spielen", "Present", "ihr", "spielt"],
-  ["spielen", "Present", "sie/Sie", "spielen"]
+  ["geben", "Present", "sie/Sie", "geben"]
 ];
   /*,
   [ "müssen", "Present", "ich", "muss" ],
