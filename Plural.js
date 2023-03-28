@@ -110,7 +110,26 @@ const prompts = [
   [ "die", "Kette", "1", "die", "Ketten" ], //colar
   [ "die", "Sonnenbrille", "1", "die", "Sonnenbrillen" ], 
   [ "die", "CD", "1", "die", "CDs" ],
-    [ "das", "theater", "1", "die", "theater"]
+  [ "das", "theater", "1", "die", "theater"],
+  [ "der", "Film", "1", "die", "Filme" ],
+  [ "der", "Freud", "1", "die", "Freude" ],
+  [ "die", "Freudin", "1", "die", "Freudinnen" ],
+  [ "der", "Frühling", "0", "", "" ],
+  [ "der", "Sommer", "0", "", "" ],
+  [ "der", "Herbst", "0", "", "" ],
+  [ "der", "Winter", "0", "", "" ],
+  [ "der", "Tag", "0", "die", "Tage" ],
+  [ "die", "Woche", "0", "die", "Wochen" ],
+  [ "der", "Sonntag", "0", "die", "Sonntage" ],
+  [ "der", "Donnerstag", "0", "die", "Donnerstage" ],
+  [ "der", "Freitag", "0", "die", "Freitage" ],
+  [ "der", "Samstag", "0", "die", "Samstage" ],
+  [ "der", "Dienstag", "0", "die", "Dienstage" ],
+  [ "der", "Mittwoch", "0", "die", "Mittwoche" ],
+  [ "der", "Montag", "0", "die", "Montage" ],
+  [ "das", "Wochenende", "0", "die", "Wochenenden" ],
+  [ "die", "Zeit", "0", "die", "Zeiten" ],
+  [ "die", "Laute", "0", "", "" ]
 
 ];
 
@@ -141,7 +160,29 @@ const newprompts = [
   [ "die", "Hose", "1", "die", "Hosen" ], //calças
   [ "die", "Kette", "1", "die", "Ketten" ], //colar
   [ "die", "Sonnenbrille", "1", "die", "Sonnenbrillen" ], 
-  [ "die", "CD", "1", "die", "CDs" ]
+  [ "die", "CD", "1", "die", "CDs" ],
+
+  [ "der", "Film", "1", "die", "Filme" ],
+  [ "der", "Frühling", "0", "", "" ],
+  [ "der", "Sommer", "0", "", "" ],
+  [ "der", "Herbst", "0", "", "" ],
+  [ "der", "Winter", "0", "", "" ],
+  [ "der", "Tag", "1", "die", "Tage" ],
+  [ "der", "Sonntag", "1", "die", "Sonntage" ],
+  [ "der", "Donnerstag", "1", "die", "Donnerstage" ],
+  [ "der", "Freitag", "1", "die", "Freitage" ],
+  [ "der", "Samstag", "1", "die", "Samstage" ],
+  [ "der", "Dienstag", "1", "die", "Dienstage" ],
+  [ "der", "Mittwoch", "1", "die", "Mittwoche" ],
+  [ "der", "Montag", "1", "die", "Montage" ],
+  [ "der", "Freund", "1", "die", "Freunde" ],
+
+  [ "die", "Freundin", "1", "die", "Freundinnen" ],
+  [ "die", "Woche", "1", "die", "Wochen" ],
+  [ "die", "Zeit", "1", "die", "Zeiten" ],
+  [ "die", "Laute", "0", "", "" ],
+
+  [ "das", "Wochenende", "1", "die", "Wochenenden" ]
 ];
 
 let workingPrompts = prompts;
@@ -239,6 +280,16 @@ function tooglenewWordsButton()
 }
 
 
+function isAnswerCorrect(answer,prompt) 
+{
+   if (prompt[4] == "") //the word as no plural
+   {
+      return (answer === prompt[0].toLowerCase() + " " + prompt[1].toLowerCase()) 
+   } else {
+       return (answer === prompt[0].toLowerCase() + " " + prompt[1].toLowerCase() + " " + prompt[3].toLowerCase() + " " + prompt[4].toLowerCase()) 
+   }
+}
+
 function submitAnswer() {
   clearInterval(timerInterval);
   clearTimeout(timeoutId);
@@ -246,7 +297,7 @@ function submitAnswer() {
   const answerInput = document.getElementById("answerInput");
   const userAnswer = answerInput.value.trim().toLowerCase();
 
-  if (userAnswer === currentPrompt[0].toLowerCase() + " " + currentPrompt[1].toLowerCase() + " " + currentPrompt[3].toLowerCase() + " " + currentPrompt[4].toLowerCase()) {
+  if (isAnswerCorrect(userAnswer,currentPrompt)) { //(userAnswer === currentPrompt[0].toLowerCase() + " " + currentPrompt[1].toLowerCase() + " " + currentPrompt[3].toLowerCase() + " " + currentPrompt[4].toLowerCase()) {
       numCorrect++;
       rigthInARowField.textContent = numCorrect;
 

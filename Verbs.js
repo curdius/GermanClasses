@@ -264,7 +264,77 @@ const prompts = [
   ["geben", "Present", "er/sie/es", "gibt","to Give"],
   ["geben", "Present", "wir", "geben","to Give"],
   ["geben", "Present", "ihr", "gebt","to Give"],
-  ["geben", "Present", "sie/Sie", "geben","to Give"]
+  ["geben", "Present", "sie/Sie", "geben","to Give"],
+
+  ["anfangen", "Present", "ich", "fange an", "to start"],
+  ["anfangen", "Present", "du", "fängst an", "to start"],
+  ["anfangen", "Present", "er/sie/es", "fängt an", "to start"],
+  ["anfangen", "Present", "wir", "fangen an", "to start"],
+  ["anfangen", "Present", "ihr", "fangt an", "to start"],
+  ["anfangen", "Present", "sie/Sie", "fangen an", "to start"],
+
+  ["aufhören", "Present", "ich", "höre auf", "to stop"],
+  ["aufhören", "Present", "du", "hörst auf", "to stop"],
+  ["aufhören", "Present", "er/sie/es", "hört auf", "to stop"],
+  ["aufhören", "Present", "wir", "hören auf", "to stop"],
+  ["aufhören", "Present", "ihr", "hört auf", "to stop"],
+  ["aufhören", "Present", "sie/Sie", "hören auf", "to stop"],
+
+  ["wegfahren", "Present", "ich", "fahre weg", "to leave"],
+  ["wegfahren", "Present", "du", "fährst weg", "to leave"],
+  ["wegfahren", "Present", "er/sie/es", "fährt weg", "to leave"],
+  ["wegfahren", "Present", "wir", "fahren weg", "to leave"],
+  ["wegfahren", "Present", "ihr", "fahrt weg", "to leave"],
+  ["wegfahren", "Present", "sie/Sie", "fahren weg", "to leave"],
+
+  ["einladen", "Present", "ich", "lade ein", "to invite"],
+  ["einladen", "Present", "du", "lädst ein", "to invite"],
+  ["einladen", "Present", "er/sie/es", "lädt ein", "to invite"],
+  ["einladen", "Present", "wir", "laden ein", "to invite"],
+  ["einladen", "Present", "ihr", "ladet ein", "to invite"],
+  ["einladen", "Present", "sie/Sie", "laden ein", "to invite"],
+
+  ["anrufen", "Present", "ich", "rufe an", "to call"],
+  ["anrufen", "Present", "du", "rufst an", "to call"],
+  ["anrufen", "Present", "er/sie/es", "ruft an", "to call"],
+  ["anrufen", "Present", "wir", "rufen an", "to call"],
+  ["anrufen", "Present", "ihr", "ruft an", "to call"],
+  ["anrufen", "Present", "sie/Sie", "rufen an", "to call"],
+
+  ["ausgehen", "Present", "ich", "gehe aus","to go out"],
+  ["ausgehen", "Present", "du", "gehst aus","to go out"],
+  ["ausgehen", "Present", "er/sie/es", "geht aus","to go out"],
+  ["ausgehen", "Present", "wir", "gehen aus","to go out"],
+  ["ausgehen", "Present", "ihr", "geht aus","to go out"],
+  ["ausgehen", "Present", "sie/Sie", "gehen aus","to go out"],
+
+  ["einkaufen", "Present", "ich", "kaufe ein","to shop"],
+  ["einkaufen", "Present", "du", "kaufst ein","to shop"],
+  ["einkaufen", "Present", "er/sie/es", "kauft ein","to shop"],
+  ["einkaufen", "Present", "wir", "kaufen ein","to shop"],
+  ["einkaufen", "Present", "ihr", "kauft ein","to shop"],
+  ["einkaufen", "Present", "sie/Sie", "kaufen ein","to shop"],
+
+  ["aufräumen", "Present", "ich", "räume auf", "to clean up"],
+  ["aufräumen", "Present", "du", "räumst auf", "to clean up"],
+  ["aufräumen", "Present", "er/sie/es", "räumt auf", "to clean up"],
+  ["aufräumen", "Present", "wir", "räumen auf", "to clean up"],
+  ["aufräumen", "Present", "ihr", "räumt auf", "to clean up"],
+  ["aufräumen", "Present", "sie/Sie", "räumen auf", "to clean up"],
+
+  ["fernsehen", "Present", "ich", "sehe fern","to watch TV"],
+  ["fernsehen", "Present", "du", "siehst fern","to watch TV"],
+  ["fernsehen", "Present", "er/sie/es", "sieht fern","to watch TV"],
+  ["fernsehen", "Present", "wir", "sehen fern","to watch TV"],
+  ["fernsehen", "Present", "ihr", "seht fern","to watch TV"],
+  ["fernsehen", "Present", "sie/Sie", "sehen fern","to watch TV"],
+  
+  ["sagen", "Present", "ich", "sage", "to say"],
+  ["sagen", "Present", "du", "sagst", "to say"],
+  ["sagen", "Present", "er/sie/es", "sagt", "to say"],
+  ["sagen", "Present", "wir", "sagen", "to say"],
+  ["sagen", "Present", "ihr", "sagt", "to say"],
+  ["sagen", "Present", "sie/Sie", "sagen", "to say"]
 ];
   /*,
   [ "müssen", "Present", "ich", "muss" ],
@@ -406,9 +476,79 @@ const newprompts = [
   ["spielen", "Present", "er/sie/es", "spielt","to Play"],
   ["spielen", "Present", "wir", "spielen","to Play"],
   ["spielen", "Present", "ihr", "spielt","to Play"],
-  ["spielen", "Present", "sie/Sie", "spielen","to Play"]
+  ["spielen", "Present", "sie/Sie", "spielen","to Play"],
 
+//Trennbare Verben
 
+  ["anfangen", "Present", "ich", "fange an", "to start"],
+  ["anfangen", "Present", "du", "fängst an", "to start"],
+  ["anfangen", "Present", "er/sie/es", "fängt an", "to start"],
+  ["anfangen", "Present", "wir", "fangen an", "to start"],
+  ["anfangen", "Present", "ihr", "fangt an", "to start"],
+  ["anfangen", "Present", "sie/Sie", "fangen an", "to start"],
+
+  ["aufhören", "Present", "ich", "höre auf", "to stop"],
+  ["aufhören", "Present", "du", "hörst auf", "to stop"],
+  ["aufhören", "Present", "er/sie/es", "hört auf", "to stop"],
+  ["aufhören", "Present", "wir", "hören auf", "to stop"],
+  ["aufhören", "Present", "ihr", "hört auf", "to stop"],
+  ["aufhören", "Present", "sie/Sie", "hören auf", "to stop"],
+
+  ["wegfahren", "Present", "ich", "fahre weg", "to leave"],
+  ["wegfahren", "Present", "du", "fährst weg", "to leave"],
+  ["wegfahren", "Present", "er/sie/es", "fährt weg", "to leave"],
+  ["wegfahren", "Present", "wir", "fahren weg", "to leave"],
+  ["wegfahren", "Present", "ihr", "fahrt weg", "to leave"],
+  ["wegfahren", "Present", "sie/Sie", "fahren weg", "to leave"],
+
+  ["einladen", "Present", "ich", "lade ein", "to invite"],
+  ["einladen", "Present", "du", "lädst ein", "to invite"],
+  ["einladen", "Present", "er/sie/es", "lädt ein", "to invite"],
+  ["einladen", "Present", "wir", "laden ein", "to invite"],
+  ["einladen", "Present", "ihr", "ladet ein", "to invite"],
+  ["einladen", "Present", "sie/Sie", "laden ein", "to invite"],
+
+  ["anrufen", "Present", "ich", "rufe an", "to call"],
+  ["anrufen", "Present", "du", "rufst an", "to call"],
+  ["anrufen", "Present", "er/sie/es", "ruft an", "to call"],
+  ["anrufen", "Present", "wir", "rufen an", "to call"],
+  ["anrufen", "Present", "ihr", "ruft an", "to call"],
+  ["anrufen", "Present", "sie/Sie", "rufen an", "to call"],
+
+  ["ausgehen", "Present", "ich", "gehe aus","to go out"],
+  ["ausgehen", "Present", "du", "gehst aus","to go out"],
+  ["ausgehen", "Present", "er/sie/es", "geht aus","to go out"],
+  ["ausgehen", "Present", "wir", "gehen aus","to go out"],
+  ["ausgehen", "Present", "ihr", "geht aus","to go out"],
+  ["ausgehen", "Present", "sie/Sie", "gehen aus","to go out"],
+
+  ["einkaufen", "Present", "ich", "kaufe ein","to shop"],
+  ["einkaufen", "Present", "du", "kaufst ein","to shop"],
+  ["einkaufen", "Present", "er/sie/es", "kauft ein","to shop"],
+  ["einkaufen", "Present", "wir", "kaufen ein","to shop"],
+  ["einkaufen", "Present", "ihr", "kauft ein","to shop"],
+  ["einkaufen", "Present", "sie/Sie", "kaufen ein","to shop"],
+
+  ["aufräumen", "Present", "ich", "räume auf", "to clean up"],
+  ["aufräumen", "Present", "du", "räumst auf", "to clean up"],
+  ["aufräumen", "Present", "er/sie/es", "räumt auf", "to clean up"],
+  ["aufräumen", "Present", "wir", "räumen auf", "to clean up"],
+  ["aufräumen", "Present", "ihr", "räumt auf", "to clean up"],
+  ["aufräumen", "Present", "sie/Sie", "räumen auf", "to clean up"],
+
+  ["fernsehen", "Present", "ich", "sehe fern","to watch TV"],
+  ["fernsehen", "Present", "du", "siehst fern","to watch TV"],
+  ["fernsehen", "Present", "er/sie/es", "sieht fern","to watch TV"],
+  ["fernsehen", "Present", "wir", "sehen fern","to watch TV"],
+  ["fernsehen", "Present", "ihr", "seht fern","to watch TV"],
+  ["fernsehen", "Present", "sie/Sie", "sehen fern","to watch TV"],
+
+  ["sagen", "Present", "ich", "sage", "to say"],
+  ["sagen", "Present", "du", "sagst", "to say"],
+  ["sagen", "Present", "er/sie/es", "sagt", "to say"],
+  ["sagen", "Present", "wir", "sagen", "to say"],
+  ["sagen", "Present", "ihr", "sagt", "to say"],
+  ["sagen", "Present", "sie/Sie", "sagen", "to say"]
 
 ];
 
