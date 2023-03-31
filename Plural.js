@@ -129,40 +129,51 @@ const prompts = [
   [ "der", "Montag", "0", "die", "Montage" ],
   [ "das", "Wochenende", "0", "die", "Wochenenden" ],
   [ "die", "Zeit", "0", "die", "Zeiten" ],
-  [ "die", "Laute", "0", "", "" ]
+  [ "die", "Laute", "0", "", "" ],
+
+  [ "der", "Ehepartner", "1", "die", "Ehepartner" ],
+  [ "die", "Ehepartnerin", "1", "die", "Ehepartnerinnen" ],
+  
+  [ "die", "Geschwister", "1", "", "" ], //plural
+
+  [ "der", "Bruder", "1", "die", "Brüder" ],
+  [ "die", "Schwester", "1", "die", "Schwestern" ],
+
+  [ "die", "Grosseltern", "1", "", "" ],
+
+  [ "die", "Grossmutter", "1", "die", "Grossmütter" ],
+  [ "der", "Grossmvater", "1", "die", "Grossmväter" ],
+
+  [ "die", "Eltern", "1", "", "" ],
+  [ "die", "Mutter", "1", "die", "Mütter" ],
+  [ "der", "Vater", "1", "die", "Väter" ],
+
+  [ "das", "Kind", "1", "die", "Kinder" ],
+  [ "der", "Sohn", "1", "die", "Söhne" ],
+  [ "die", "Tochter", "1", "die", "Töchter" ],
+  [ "das", "Mädchen", "1", "die", "Mädchen" ], //girl
+  [ "der", "Knabe", "1", "die", "Knaben" ], //boy
+  
+  [ "das", "Ausland", "1", "", "" ],
+  [ "die", "Familie", "1", "die", "Familien" ],
+
+  [ "der", "Schwager", "1", "die", "Schwäger" ], //cunhado
+  [ "die", "Schwester", "1", "die", "Schwestern" ], //cunhada
+
+  [ "der", "Onkel", "1", "die", "Onkel" ],
+  [ "die", "Tante", "1", "die", "Tanten" ],
+
+  [ "die", "Schwiegervater", "1", "die", "Schwiegerväter" ],
+  [ "die", "Schwiegermutter", "1", "die", "Schwiegermütter" ],
+
+  [ "der", "Enkel", "1", "die", "Enkel" ],
+  [ "die", "Enkelin", "1", "die", "Enkelinnen" ]
+
 
 ];
 
 const newprompts = [
-  [ "das", "Ding", "5", "die", "Dinge" ],
-  [ "das", "Jahr", "5", "die", "Jahre" ],
-  [ "das", "Kleid", "1", "die", "Kleider" ], //vestido
-  [ "das", "Ladekabel", "1", "die", "Ladekabel" ],
-  [ "das", "Schiff", "1", "die", "Schiffe" ], //Ship
-  [ "das", "Foto", "1", "die", "Fotos" ], 
-  [ "das", "Smartphone", "1", "die", "Smartphones"],
-  [ "das", "theater", "1", "die", "theater"],
-
-  [ "der", "Sport", "5", "die", "Sporte" ],
-  [ "der", "USB-Stick", "1", "die", "USB-Sticks" ],
-  [ "der", "Ring", "1", "die", "Ringe" ],
-  [ "der", "Lippenstift", "1", "die", "Lippenstifte" ],
-  [ "der", "Koffer", "1", "die", "Koffer" ], //mala viagem
-  [ "der", "Schuh", "1", "die", "Schuhe" ],
-  [ "der", "Hut", "1", "die", "Hüte" ], //chapeu
-  [ "der", "Tipp", "1", "die", "Tipps" ], //Tip
-  [ "der", "Traum", "1", "die", "Träume" ], //Sonho
-  [ "der", "Hafen", "1", "die", "Häfen" ], //Porto
-  [ "der", "Mann", "1", "die", "Männer" ],
-
-  [ "die", "Batterie", "1", "die", "Batterien" ],
-  [ "die", "Handyhülle", "1", "die", "Handyhüllen" ],
-  [ "die", "Hose", "1", "die", "Hosen" ], //calças
-  [ "die", "Kette", "1", "die", "Ketten" ], //colar
-  [ "die", "Sonnenbrille", "1", "die", "Sonnenbrillen" ], 
-  [ "die", "CD", "1", "die", "CDs" ],
-
-  [ "der", "Film", "1", "die", "Filme" ],
+ /* [ "der", "Film", "1", "die", "Filme" ],
   [ "der", "Frühling", "0", "", "" ],
   [ "der", "Sommer", "0", "", "" ],
   [ "der", "Herbst", "0", "", "" ],
@@ -182,7 +193,51 @@ const newprompts = [
   [ "die", "Zeit", "1", "die", "Zeiten" ],
   [ "die", "Laute", "0", "", "" ],
 
-  [ "das", "Wochenende", "1", "die", "Wochenenden" ]
+  [ "das", "Wochenende", "1", "die", "Wochenenden" ], */
+
+
+  [ "der", "Ehepartner", "1", "die", "Ehepartner" ],
+  [ "die", "Ehepartnerin", "1", "die", "Ehepartnerinnen" ],
+  
+  [ "die", "Geschwister", "1", "", "" ], //plural
+
+  [ "der", "Bruder", "1", "die", "Brüder" ],
+  [ "die", "Schwester", "1", "die", "Schwestern" ],
+
+  [ "die", "Grosseltern", "1", "", "" ],
+
+  [ "die", "Grossmutter", "1", "die", "Grossmütter" ],
+  [ "der", "Grossvater", "1", "die", "Grossväter" ],
+
+  [ "die", "Eltern", "1", "", "" ],
+  [ "die", "Mutter", "1", "die", "Mütter" ],
+  [ "der", "Vater", "1", "die", "Väter" ],
+
+  [ "das", "Kind", "1", "die", "Kinder" ],
+  [ "der", "Sohn", "1", "die", "Söhne" ],
+  [ "die", "Tochter", "1", "die", "Töchter" ],
+  [ "das", "Mädchen", "1", "die", "Mädchen" ], //girl
+  [ "der", "Knabe", "1", "die", "Knaben" ], //boy
+  
+  [ "das", "Ausland", "1", "", "" ],
+  [ "die", "Familie", "1", "die", "Familien" ],
+
+  [ "der", "Schwager", "1", "die", "Schwäger" ], //cunhado
+  [ "die", "Schwester", "1", "die", "Schwestern" ], //cunhada
+
+  [ "der", "Onkel", "1", "die", "Onkel" ],
+  [ "die", "Tante", "1", "die", "Tanten" ],
+
+  [ "der", "Schwiegervater", "1", "die", "Schwiegerväter" ],
+  [ "die", "Schwiegermutter", "1", "die", "Schwiegermütter" ],
+
+  [ "der", "Enkel", "1", "die", "Enkel" ],
+  [ "die", "Enkelin", "1", "die", "Enkelinnen" ]
+
+
+
+
+
 ];
 
 let workingPrompts = prompts;
