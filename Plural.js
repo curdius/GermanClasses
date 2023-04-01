@@ -167,8 +167,10 @@ const prompts = [
   [ "die", "Schwiegermutter", "1", "die", "Schwiegermütter" ],
 
   [ "der", "Enkel", "1", "die", "Enkel" ],
-  [ "die", "Enkelin", "1", "die", "Enkelinnen" ]
+  [ "die", "Enkelin", "1", "die", "Enkelinnen" ],
 
+  [ "der", "Neffe", "1", "die", "Neffen" ],
+  [ "die", "Nichte", "1", "die", "Nichten" ]
 
 ];
 
@@ -232,7 +234,10 @@ const newprompts = [
   [ "die", "Schwiegermutter", "1", "die", "Schwiegermütter" ],
 
   [ "der", "Enkel", "1", "die", "Enkel" ],
-  [ "die", "Enkelin", "1", "die", "Enkelinnen" ]
+  [ "die", "Enkelin", "1", "die", "Enkelinnen" ],
+
+  [ "der", "Neffe", "1", "die", "Neffen" ],
+  [ "die", "Nichte", "1", "die", "Nichten" ]
 
 
 
