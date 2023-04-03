@@ -393,7 +393,6 @@ function submitAnswer() {
           answerInput.value = "";
           answerInput.focus();
           showMessage("success", "Correct! Keep going...");
-
         }
         rigthAnswers++;
         rigthAnswersField.textContent=rigthAnswers;
@@ -441,14 +440,15 @@ window.addEventListener('beforeunload', function (event) {
   event.preventDefault();
   event.returnValue = '';
   percentage = Math.round((rigthAnswers / (rigthAnswers+wrongAnswers))) * 100;
-  logtail.info("Plural game finished", {
-    rigthAnswers: rigthAnswers,
-    wrongAnswers: wrongAnswers,
-    percentageSuccess: percentage
-    });
-  // Ensure that all logs are sent to Logtail
-  logtail.flush()
-
+  if ((rigthAnswers+wrongAnswers)>0) {
+      logtail.info("Plural game finished", {
+        rigthAnswers: rigthAnswers,
+        wrongAnswers: wrongAnswers,
+        percentageSuccess: percentage
+        });
+      // Ensure that all logs are sent to Logtail
+      logtail.flush()
+  }
 });
 
 textBox.focus();
