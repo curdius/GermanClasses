@@ -643,7 +643,7 @@ function showPrompt() {
 
         const promptElement = document.getElementById("prompt");
         promptElement.innerHTML = "Give me the <B> " + currentPrompt[1] + "</B> of the Verb: <B>" + currentPrompt[0] +  "</B>   <I>(" + currentPrompt[4] +  ")</I>for the pronoun <B>" + currentPrompt[2] + "</B>" ;
-        difficulty.textContent = currentPrompt[5] + "/2";
+        difficulty.textContent = currentPrompt[5] + "/3";
         difficultyIndex += currentPrompt[5];
 
         // set a timeout of 5 seconds
@@ -780,7 +780,7 @@ window.addEventListener('beforeunload', function (event) {
   event.preventDefault();
   event.returnValue = '';
 
-  percentage = Math.round((rigthAnswers / (rigthAnswers+wrongAnswers))) * 100;
+  percentage = Math.round((rigthAnswers / (rigthAnswers+wrongAnswers)) * 100);
   difficultyIndex = (difficultyIndex /(rigthAnswers+wrongAnswers));
   
   if ((rigthAnswers+wrongAnswers)>0) {
