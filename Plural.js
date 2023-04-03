@@ -142,7 +142,7 @@ const prompts = [
   [ "die", "Grosseltern", "1", "", "" ],
 
   [ "die", "Grossmutter", "1", "die", "Grossmütter" ],
-  [ "der", "Grossmvater", "1", "die", "Grossmväter" ],
+  [ "der", "Grossvater", "1", "die", "Grossväter" ],
 
   [ "die", "Eltern", "1", "", "" ],
   [ "die", "Mutter", "1", "die", "Mütter" ],
@@ -163,7 +163,7 @@ const prompts = [
   [ "der", "Onkel", "1", "die", "Onkel" ],
   [ "die", "Tante", "1", "die", "Tanten" ],
 
-  [ "die", "Schwiegervater", "1", "die", "Schwiegerväter" ],
+  [ "der", "Schwiegervater", "1", "die", "Schwiegerväter" ],
   [ "die", "Schwiegermutter", "1", "die", "Schwiegermütter" ],
 
   [ "der", "Enkel", "1", "die", "Enkel" ],
@@ -251,11 +251,13 @@ let currentPrompt;
 let numCorrect = 0;
 let rigthAnswers=0;
 let wrongAnswers=0;
+let percentage =0;
 
 const rigthInARowField =document.getElementById('rightinarow');
 const rigthAnswersField =document.getElementById('rigth');
 const wrongAnswersField =document.getElementById('wrong');
 const newornotnewlabel = document.getElementById('newornotnewlabel');
+const percentageField = document.getElementById('percentage');
 
 
 rigthInARowField.textContent = 0;
@@ -295,6 +297,7 @@ function showPrompt() {
       
         wrongAnswers++;
         wrongAnswersField.textContent=wrongAnswers;
+        updatePercentage();
 
           clearInterval(timerInterval);
           clearTimeout(timeoutId);
@@ -313,6 +316,13 @@ function showPrompt() {
   }, 1000);
 
 }
+
+function updatePercentage()
+{
+    percentage = Math.round((rigthAnswers / (rigthAnswers+wrongAnswers)) * 100);
+    percentageField.textContent = percentage;
+
+} 
 
 function showMessage(type, message) {
   const messageElement = document.getElementById("message");
@@ -338,6 +348,19 @@ function tooglenewWordsButton()
       workingPrompts = prompts;
   }
 }
+
+
+
+        // Function to track user activity
+        function logActivity(numCorrect, numIncorrect) {
+            var logMessage = {
+                numCorrect: numCorrect,
+                numIncorrect: numIncorrect
+            };
+            logglyTracker.push(logMessage);
+        }
+
+       
 
 
 function isAnswerCorrect(answer,prompt) 
@@ -370,7 +393,6 @@ function submitAnswer() {
           answerInput.value = "";
           answerInput.focus();
           showMessage("success", "Correct! Keep going...");
-          showPrompt();
 
         }
         rigthAnswers++;
@@ -387,9 +409,10 @@ function submitAnswer() {
 
 
         showMessage("error", `Sorry, that's incorrect. The correct answer is <B>"${currentPrompt[0]} ${currentPrompt[1]} ${currentPrompt[3]} ${currentPrompt[4]}"</B>.`);
-        showPrompt();
+       
       }
-
+      updatePercentage();
+      showPrompt();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -417,6 +440,15 @@ window.addEventListener('beforeunload', function (event) {
   clearTimeout(timeoutId);
   event.preventDefault();
   event.returnValue = '';
+  percentage = Math.round((rigthAnswers / (rigthAnswers+wrongAnswers))) * 100;
+  logtail.info("Plural game finished", {
+    rigthAnswers: rigthAnswers,
+    wrongAnswers: wrongAnswers,
+    percentageSuccess: percentage
+    });
+  // Ensure that all logs are sent to Logtail
+  logtail.flush()
+
 });
 
 textBox.focus();

@@ -3,7 +3,11 @@
 <head>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SSV0MTD1SW"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/logtail-browser/0.3.0/dist/umd/logtail.js" integrity="sha512-j7t6vlvFm1ANrX6dGt+NFtZqOjWeeNlPmAWCkf8mf1n7CMjZVubwUBEvNiVT0RE7voXE7ojiQBNWsAreLg00CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
+
+  const logtail = new Logtail("yz4CYouZNh8xPrYSGttBvny9");
+
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -94,7 +98,8 @@
   <br><br>
   <span class="counters" id="rightinarow"></span> Rigth in a row<BR>
   <span  class="counters"id="rigth"></span> Rigth<BR>
-  <span  class="counters"id="wrong"></span> Wrong
+  <span  class="counters"id="wrong"></span> Wrong<BR>
+  <span class="counters" id="percentage"></span> % 
 </div>
   <script src="Verbs.js"></script>
     <h2><a href="index.html">Back</a></h2>

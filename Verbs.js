@@ -559,11 +559,15 @@ let currentPrompt;
 let numCorrect = 0;
 let rigthAnswers=0;
 let wrongAnswers=0;
+let percentage =0;
+
 
 const rigthInARowField =document.getElementById('rightinarow');
 const rigthAnswersField =document.getElementById('rigth');
 const wrongAnswersField =document.getElementById('wrong');
 const newornotnewlabel = document.getElementById('newornotnewlabel');
+const percentageField = document.getElementById('percentage');
+
 
 rigthInARowField.textContent = 0;
 rigthAnswersField.textContent = 0;
@@ -599,8 +603,10 @@ function showPrompt() {
             wrongAnswers++;
             wrongAnswersField.textContent=wrongAnswers;
 
-  clearInterval(timerInterval);
-  clearTimeout(timeoutId);
+             updatePercentage();
+
+            clearInterval(timerInterval);
+            clearTimeout(timeoutId);
 
 
         showMessage("error", `too slow! Time's up! You only have ` + time2Answer + ` secs`);
@@ -616,6 +622,15 @@ function showPrompt() {
       }, 1000);
 
 }
+
+
+function updatePercentage()
+{
+    percentage = Math.round((rigthAnswers / (rigthAnswers+wrongAnswers)) * 100);
+    percentageField.textContent = percentage;
+
+} 
+
 
 function showMessage(type, message) {
       const messageElement = document.getElementById("message");
@@ -651,40 +666,37 @@ function submitAnswer() {
 
       if (userAnswer === currentPrompt[3].toLowerCase())  {
 
-        numCorrect++;
-        rigthInARowField.textContent = numCorrect;
+              numCorrect++;
+              rigthInARowField.textContent = numCorrect;
 
-        answerInput.value = "";
-        answerInput.focus();
-
-
-          if (numCorrect === MaxQuestions) {
-              alert("Congratulations! You got " + MaxQuestions + " questions in a row right!");
-          } else {
-            answerInput.value = "";
-            answerInput.focus();
-            showMessage("success", "Correct! Keep going...");
-            showPrompt();
-
-          }
-          rigthAnswers++;
-          rigthAnswersField.textContent=rigthAnswers;
+              answerInput.value = "";
+              answerInput.focus();
 
 
+                if (numCorrect === MaxQuestions) {
+                    alert("Congratulations! You got " + MaxQuestions + " questions in a row right!");
+                } else {
+                  answerInput.value = "";
+                  answerInput.focus();
+                  showMessage("success", "Correct! Keep going...");
+                }
+                rigthAnswers++;
+                rigthAnswersField.textContent=rigthAnswers;
         } else {
-          answerInput.value = "";
-          answerInput.focus();
+                answerInput.value = "";
+                answerInput.focus();
 
-          numCorrect = 0;
-          rigthInARowField.textContent = numCorrect;
+                numCorrect = 0;
+                rigthInARowField.textContent = numCorrect;
 
-          wrongAnswers++;
-          wrongAnswersField.textContent=wrongAnswers;
+                wrongAnswers++;
+                wrongAnswersField.textContent=wrongAnswers;
 
 
-          showMessage("error", `Sorry, that's incorrect. The correct answer is <B> "${currentPrompt[3]} "</B>.`);
-          showPrompt();
+                showMessage("error", `Sorry, that's incorrect. The correct answer is <B> "${currentPrompt[3]} "</B>.`);
         }
+        showPrompt();
+        updatePercentage();
 
 }
 
@@ -713,6 +725,14 @@ window.addEventListener('beforeunload', function (event) {
   clearTimeout(timeoutId);
   event.preventDefault();
   event.returnValue = '';
+  percentage = Math.round((rigthAnswers / (rigthAnswers+wrongAnswers))) * 100;
+  logtail.info("Verbs game finished", {
+    rigthAnswers: rigthAnswers,
+    wrongAnswers: wrongAnswers,
+    percentageSuccess: percentage
+    });
+  // Ensure that all logs are sent to Logtail
+  logtail.flush()
 });
 
 textBox.focus();
