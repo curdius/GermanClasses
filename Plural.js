@@ -237,9 +237,21 @@ const newprompts = [
   [ "die", "Enkelin", "1", "die", "Enkelinnen" ,1],
 
   [ "der", "Neffe", "1", "die", "Neffen" ,1],
-  [ "die", "Nichte", "1", "die", "Nichten" ,1]
+  [ "die", "Nichte", "1", "die", "Nichten" ,1],
 
+ [ "der", "Brief", "1", "die", "Briefe" ,1], //carta
+ [ "die", "Party", "1", "die", "Partys" ,1],
+ [ "die", "Feier", "1", "die", "Feiern" ,1],  //ferias
 
+ [ "die", "Sprache", "1", "die", "Sprachen" ,1], 
+
+  //[ "der", "Deutsche", "1", "die", "Deutsche" ,1], 
+  //[ "die", "Deutscher", "1", "die", "Deutschen" ,1], //
+  [ "der", "Österreicher", "1", "die", "Österreicher" ,1], 
+  [ "die", "Österreicherin", "1", "die", "Österreicherinnen" ,1],
+  [ "der", "Schweizer", "1", "die", "Schweizer" ,1],
+  [ "die", "Schweizerin", "1", "die", "Schweizerinnen" ,1],
+  [ "die", "Schweizerin", "1", "die", "Schweizerinnen" ,1]
 
 ];
 
