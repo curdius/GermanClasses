@@ -352,7 +352,49 @@ const prompts = [
   ["sagen", "Present", "er/sie/es", "sagt", "to say",2],
   ["sagen", "Present", "wir", "sagen", "to say",1],
   ["sagen", "Present", "ihr", "sagt", "to say",2],
-  ["sagen", "Present", "sie/Sie", "sagen", "to say",1]
+  ["sagen", "Present", "sie/Sie", "sagen", "to say",1],
+
+  ["sein", "Präteritum", "ich", "war","was",3],
+  ["sein", "Präteritum", "du", "warst","were",3],
+  ["sein", "Präteritum", "er/sie/es", "war","was",3],
+  ["sein", "Präteritum", "wir", "waren","were",3],
+  ["sein", "Präteritum", "ihr", "wart","were",3],
+  ["sein", "Präteritum", "sie/Sie", "waren","were",3],
+
+  ["aussehen", "Present", "ich", "sehe aus","to look",2],
+  ["aussehen", "Present", "du", "siehst aus","to look",3],
+  ["aussehen", "Present", "er/sie/es", "sieht aus","to look",3],
+  ["aussehen", "Present", "wir", "sehen aus","to look",2],
+  ["aussehen", "Present", "ihr", "seht aus","to look",2],
+  ["aussehen", "Present", "sie/Sie", "sehen aus","to look",2],
+  
+  ["sein", "Präteritum", "ich", "war","was",3],
+  ["sein", "Präteritum", "du", "warst","were",3],
+  ["sein", "Präteritum", "er/sie/es", "war","was",3],
+  ["sein", "Präteritum", "wir", "waren","were",3],
+  ["sein", "Präteritum", "ihr", "wart","were",3],
+  ["sein", "Präteritum", "sie/Sie", "waren","were",3],
+  
+  ["müssen", "Present", "ich", "muss", "must/have to", 1],
+  ["müssen", "Present", "du", "musst", "must/have to", 2],
+  ["müssen", "Present", "er/sie/es", "muss", "must/have to", 3],
+  ["müssen", "Present", "wir", "müssen", "must/have to", 1],
+  ["müssen", "Present", "ihr", "müsst", "must/have to", 2],
+  ["müssen", "Present", "sie/Sie", "müssen", "must/have to", 3],
+
+  ["wollen", "Present", "ich", "will", "want/wish to", 1],
+  ["wollen", "Present", "du", "willst", "want/wish to", 2],
+  ["wollen", "Present", "er/sie/es", "will", "want/wish to", 3],
+  ["wollen", "Present", "wir", "wollen", "want/wish to", 1],
+  ["wollen", "Present", "ihr", "wollt", "want/wish to", 2],
+  ["wollen", "Present", "sie/Sie", "wollen", "want/wish to", 3],
+
+  ["haben", "Preterite", "ich", "hatte", "had", 2],
+  ["haben", "Preterite", "du", "hattest", "had", 2],
+  ["haben", "Preterite", "er/sie/es", "hatte", "had", 3],
+  ["haben", "Preterite", "wir", "hatten", "had", 2],
+  ["haben", "Preterite", "ihr", "hattet", "had", 2],
+  ["haben", "Preterite", "sie/Sie", "hatten", "had",2]
 ];
 
   /*,
@@ -368,206 +410,33 @@ const newprompts = [
 
 //ä to ä
 
-  ["fahren", "Present", "ich", "fahre","to Drive",1],
-  ["fahren", "Present", "du", "fährst","to Drive",3],
-  ["fahren", "Present", "er/sie/es", "fährt","to Drive",3],
-  ["fahren", "Present", "wir", "fahren","to Drive",1],
-  ["fahren", "Present", "ihr", "fahrt","to Drive",1],
-  ["fahren", "Present", "sie/Sie", "fahren","to Drive",1],
+  ["sein", "Präteritum", "ich", "war","was",3],
+  ["sein", "Präteritum", "du", "warst","were",3],
+  ["sein", "Präteritum", "er/sie/es", "war","was",3],
+  ["sein", "Präteritum", "wir", "waren","were",3],
+  ["sein", "Präteritum", "ihr", "wart","were",3],
+  ["sein", "Präteritum", "sie/Sie", "waren","were",3],
 
-  ["waschen", "Present", "ich", "wasche","to Wash",1],
-  ["waschen", "Present", "du", "wäschst","to Wash",3],
-  ["waschen", "Present", "er/sie/es", "wäscht","to Wash",3],
-  ["waschen", "Present", "wir", "waschen","to Wash",1],
-  ["waschen", "Present", "ihr", "wascht","to Wash",1],
-  ["waschen", "Present", "sie/Sie", "waschen","to Wash",1],
+  ["müssen", "Present", "ich", "muss", "must/have to", 1],
+  ["müssen", "Present", "du", "musst", "must/have to", 2],
+  ["müssen", "Present", "er/sie/es", "muss", "must/have to", 3],
+  ["müssen", "Present", "wir", "müssen", "must/have to", 1],
+  ["müssen", "Present", "ihr", "müsst", "must/have to", 2],
+  ["müssen", "Present", "sie/Sie", "müssen", "must/have to", 3],
 
-  ["schlafen", "Present", "ich", "schlafe","to Sleep",1],
-  ["schlafen", "Present", "du", "schläfst","to Sleep",3],
-  ["schlafen", "Present", "er/sie/es", "schläft","to Sleep",3],
-  ["schlafen", "Present", "wir", "schlafen","to Sleep",1],
-  ["schlafen", "Present", "ihr", "schlaft","to Sleep",1],
-  ["schlafen", "Present", "sie/Sie", "schlafen","to Sleep",1],
+  ["wollen", "Present", "ich", "will", "want/wish to", 1],
+  ["wollen", "Present", "du", "willst", "want/wish to", 2],
+  ["wollen", "Present", "er/sie/es", "will", "want/wish to", 3],
+  ["wollen", "Present", "wir", "wollen", "want/wish to", 1],
+  ["wollen", "Present", "ihr", "wollt", "want/wish to", 2],
+  ["wollen", "Present", "sie/Sie", "wollen", "want/wish to", 3],
 
-  ["laufen", "Present", "ich", "laufe","to Run",1],
-  ["laufen", "Present", "du", "läufst","to Run",3],
-  ["laufen", "Present", "er/sie/es", "läuft","to Run",3],
-  ["laufen", "Present", "wir", "laufen","to Run",1],
-  ["laufen", "Present", "ihr", "lauft","to Run",1],
-  ["laufen", "Present", "sie/Sie", "laufen","to Run",1],
-
-  //e to ie
-
-
-  ["lesen", "Present", "ich", "lese","to Read",1],
-  ["lesen", "Present", "du", "liest","to Read",3],
-  ["lesen", "Present", "er/sie/es", "liest","to Read",3],
-  ["lesen", "Present", "wir", "lesen","to Read",1],
-  ["lesen", "Present", "ihr", "lest","to Read",1],
-  ["lesen", "Present", "sie/Sie", "lesen","to Read",1],
-
-  ["sehen", "Present", "ich", "sehe","to See",1],
-  ["sehen", "Present", "du", "siehst","to See",3],
-  ["sehen", "Present", "er/sie/es", "sieht","to See",3],
-  ["sehen", "Present", "wir", "sehen","to See",1],
-  ["sehen", "Present", "ihr", "seht","to See",1],
-  ["sehen", "Present", "sie/Sie", "sehen","to See",1],
-
-  //e to i
-
-
-  ["treffen", "Present", "ich", "treffe","to Meet",1],
-  ["treffen", "Present", "du", "triffst","to Meet",3],
-  ["treffen", "Present", "er/sie/es", "trifft","to Meet",3],
-  ["treffen", "Present", "wir", "treffen","to Meet",1],
-  ["treffen", "Present", "ihr", "trefft","to Meet",1],
-  ["treffen", "Present", "sie/Sie", "treffen","to Meet",1],
-
-
-  ["sprechen", "Present", "ich", "spreche","to Speak",1],
-  ["sprechen", "Present", "du", "sprichst","to Speak",3],
-  ["sprechen", "Present", "er/sie/es", "spricht","to Speak",3],
-  ["sprechen", "Present", "wir", "sprechen","to Speak",1],
-  ["sprechen", "Present", "ihr", "sprecht","to Speak",1],
-  ["sprechen", "Present", "sie/Sie", "sprechen","to Speak",1],
-
-
-  ["essen", "Present", "ich", "esse","to Eat",1],
-  ["essen", "Present", "du", "isst","to Eat",3],
-  ["essen", "Present", "er/sie/es", "isst","to Eat",3],
-  ["essen", "Present", "wir", "essen","to Eat",1],
-  ["essen", "Present", "ihr", "esst","to Eat",1],
-  ["essen", "Present", "sie/Sie", "essen","to Eat",1],
-
-
-  ["nehmen", "Present", "ich", "nehme","to Take",1],
-  ["nehmen", "Present", "du", "nimmst","to Take",3],
-  ["nehmen", "Present", "er/sie/es", "nimmt","to Take",3],
-  ["nehmen", "Present", "wir", "nehmen","to Take",1],
-  ["nehmen", "Present", "ihr", "nehmt","to Take",1],
-  ["nehmen", "Present", "sie/Sie", "nehmen","to Take",1],
-
-  ["geben", "Present", "ich", "gebe","to Give",1],
-  ["geben", "Present", "du", "gibst","to Give",3],
-  ["geben", "Present", "er/sie/es", "gibt","to Give",3],
-  ["geben", "Present", "wir", "geben","to Give",1],
-  ["geben", "Present", "ihr", "gebt","to Give",1],
-  ["geben", "Present", "sie/Sie", "geben","to Give",1],
-
-
-  //normal
-
-  ["hören", "Present", "ich", "höre","to Hear",1],
-  ["hören", "Present", "du", "hörst","to Hear",2],
-  ["hören", "Present", "er/sie/es", "hört","to Hear",2],
-  ["hören", "Present", "wir", "hören","to Hear",1],
-  ["hören", "Present", "ihr", "hört","to Hear",2],
-  ["hören", "Present", "sie/Sie", "hören","to Hear",1],
-
-
-  ["wandern", "Present", "ich", "wandere","to Hike",1],
-  ["wandern", "Present", "du", "wanderst","to Hike",2],
-  ["wandern", "Present", "er/sie/es", "wandert","to Hike",2],
-  ["wandern", "Present", "wir", "wandern","to Hike",1],
-  ["wandern", "Present", "ihr", "wandert","to Hike",2],
-  ["wandern", "Present", "sie/Sie", "wandern","to Hike",1],
-
-
-  ["schwimmen", "Present", "ich", "schwimme","to Swim",1],
-  ["schwimmen", "Present", "du", "schwimmst","to Swim",2],
-  ["schwimmen", "Present", "er/sie/es", "schwimmt","to Swim",2],
-  ["schwimmen", "Present", "wir", "schwimmen","to Swim",1],
-  ["schwimmen", "Present", "ihr", "schwimmt","to Swim",2],
-  ["schwimmen", "Present", "sie/Sie", "schwimmen","to Swim",1],
-
-
-  ["kochen", "Present", "ich", "koche","to Cook",1],
-  ["kochen", "Present", "du", "kochst","to Cook",2],
-  ["kochen", "Present", "er/sie/es", "kocht","to Cook",2],
-  ["kochen", "Present", "wir", "kochen","to Cook",1],
-  ["kochen", "Present", "ihr", "kocht","to Cook",2],
-  ["kochen", "Present", "sie/Sie", "kochen","to Cook",1],
-
-
-
-  ["spielen", "Present", "ich", "spiele","to Play",1],
-  ["spielen", "Present", "du", "spielst","to Play",2],
-  ["spielen", "Present", "er/sie/es", "spielt","to Play",2],
-  ["spielen", "Present", "wir", "spielen","to Play",1],
-  ["spielen", "Present", "ihr", "spielt","to Play",2],
-  ["spielen", "Present", "sie/Sie", "spielen","to Play",1],
-
-//Trennbare Verben
-
-  ["anfangen", "Present", "ich", "fange an", "to start",2],
-  ["anfangen", "Present", "du", "fängst an", "to start",3],
-  ["anfangen", "Present", "er/sie/es", "fängt an", "to start",3],
-  ["anfangen", "Present", "wir", "fangen an", "to start",2],
-  ["anfangen", "Present", "ihr", "fangt an", "to start",2],
-  ["anfangen", "Present", "sie/Sie", "fangen an", "to start",2],
-
-  ["aufhören", "Present", "ich", "höre auf", "to stop",2],
-  ["aufhören", "Present", "du", "hörst auf", "to stop",3],
-  ["aufhören", "Present", "er/sie/es", "hört auf", "to stop",3],
-  ["aufhören", "Present", "wir", "hören auf", "to stop",2],
-  ["aufhören", "Present", "ihr", "hört auf", "to stop",3],
-  ["aufhören", "Present", "sie/Sie", "hören auf", "to stop",2],
-
-  ["wegfahren", "Present", "ich", "fahre weg", "to leave",2],
-  ["wegfahren", "Present", "du", "fährst weg", "to leave",3],
-  ["wegfahren", "Present", "er/sie/es", "fährt weg", "to leave",3],
-  ["wegfahren", "Present", "wir", "fahren weg", "to leave",2],
-  ["wegfahren", "Present", "ihr", "fahrt weg", "to leave",3],
-  ["wegfahren", "Present", "sie/Sie", "fahren weg", "to leave",2],
-
-  ["einladen", "Present", "ich", "lade ein", "to invite",2],
-  ["einladen", "Present", "du", "lädst ein", "to invite",3],
-  ["einladen", "Present", "er/sie/es", "lädt ein", "to invite",3],
-  ["einladen", "Present", "wir", "laden ein", "to invite",2],
-  ["einladen", "Present", "ihr", "ladet ein", "to invite",3],
-  ["einladen", "Present", "sie/Sie", "laden ein", "to invite",2],
-
-  ["anrufen", "Present", "ich", "rufe an", "to call",2],
-  ["anrufen", "Present", "du", "rufst an", "to call",3],
-  ["anrufen", "Present", "er/sie/es", "ruft an", "to call",3],
-  ["anrufen", "Present", "wir", "rufen an", "to call",2],
-  ["anrufen", "Present", "ihr", "ruft an", "to call",3],
-  ["anrufen", "Present", "sie/Sie", "rufen an", "to call",2],
-
-  ["ausgehen", "Present", "ich", "gehe aus","to go out",2],
-  ["ausgehen", "Present", "du", "gehst aus","to go out",3],
-  ["ausgehen", "Present", "er/sie/es", "geht aus","to go out",3],
-  ["ausgehen", "Present", "wir", "gehen aus","to go out",2],
-  ["ausgehen", "Present", "ihr", "geht aus","to go out",3],
-  ["ausgehen", "Present", "sie/Sie", "gehen aus","to go out",2],
-
-  ["einkaufen", "Present", "ich", "kaufe ein","to shop",2],
-  ["einkaufen", "Present", "du", "kaufst ein","to shop",3],
-  ["einkaufen", "Present", "er/sie/es", "kauft ein","to shop",3],
-  ["einkaufen", "Present", "wir", "kaufen ein","to shop",2],
-  ["einkaufen", "Present", "ihr", "kauft ein","to shop",3],
-  ["einkaufen", "Present", "sie/Sie", "kaufen ein","to shop",2],
-
-  ["aufräumen", "Present", "ich", "räume auf", "to clean up",2],
-  ["aufräumen", "Present", "du", "räumst auf", "to clean up",3],
-  ["aufräumen", "Present", "er/sie/es", "räumt auf", "to clean up",3],
-  ["aufräumen", "Present", "wir", "räumen auf", "to clean up",2],
-  ["aufräumen", "Present", "ihr", "räumt auf", "to clean up",3],
-  ["aufräumen", "Present", "sie/Sie", "räumen auf", "to clean up",2],
-
-  ["fernsehen", "Present", "ich", "sehe fern","to watch TV",2],
-  ["fernsehen", "Present", "du", "siehst fern","to watch TV",3],
-  ["fernsehen", "Present", "er/sie/es", "sieht fern","to watch TV",3],
-  ["fernsehen", "Present", "wir", "sehen fern","to watch TV",2],
-  ["fernsehen", "Present", "ihr", "seht fern","to watch TV",3],
-  ["fernsehen", "Present", "sie/Sie", "sehen fern","to watch TV",2],
-
-  ["sagen", "Present", "ich", "sage", "to say",1],
-  ["sagen", "Present", "du", "sagst", "to say",2],
-  ["sagen", "Present", "er/sie/es", "sagt", "to say",2],
-  ["sagen", "Present", "wir", "sagen", "to say",1],
-  ["sagen", "Present", "ihr", "sagt", "to say",2],
-  ["sagen", "Present", "sie/Sie", "sagen", "to say",1]
+  ["haben", "Preterite", "ich", "hatte", "had", 2],
+  ["haben", "Preterite", "du", "hattest", "had", 2],
+  ["haben", "Preterite", "er/sie/es", "hatte", "had", 3],
+  ["haben", "Preterite", "wir", "hatten", "had", 2],
+  ["haben", "Preterite", "ihr", "hattet", "had", 2],
+  ["haben", "Preterite", "sie/Sie", "hatten", "had",2]
 
 ];
 
@@ -580,6 +449,8 @@ let rigthAnswers=0;
 let wrongAnswers=0;
 let percentage =0;
 let difficultyIndex =0;
+let biggestWinningSeries =0;
+
 
 const rigthInARowField =document.getElementById('rightinarow');
 const rigthAnswersField =document.getElementById('rigth');
@@ -737,6 +608,8 @@ function submitAnswer() {
                 rigthAnswers++;
                 rigthAnswersField.textContent=rigthAnswers;
         } else {
+                if (numCorrect>biggestWinningSeries) 
+                  biggestWinningSeries = numCorrect;
                 answerInput.value = "";
                 answerInput.focus();
 
@@ -783,12 +656,17 @@ window.addEventListener('beforeunload', function (event) {
   percentage = Math.round((rigthAnswers / (rigthAnswers+wrongAnswers)) * 100);
   difficultyIndex = (difficultyIndex /(rigthAnswers+wrongAnswers));
   
+  if (numCorrect>biggestWinningSeries) 
+            biggestWinningSeries = numCorrect;
+
   if ((rigthAnswers+wrongAnswers)>0) {
     logtail.info("Verbs game finished", {
       rigthAnswers: rigthAnswers,
       wrongAnswers: wrongAnswers,
       percentageSuccess: percentage,
-      difficultyIndex: difficultyIndex
+      difficultyIndex: difficultyIndex,
+      biggestWinningSeries: biggestWinningSeries
+
       });
     // Ensure that all logs are sent to Logtail
     logtail.flush()

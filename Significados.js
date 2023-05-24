@@ -170,132 +170,70 @@ const prompts = [
   [ "die", "Enkelin", "1", "die", "Enkelinnen" ,1],
 
   [ "der", "Neffe", "1", "die", "Neffen" ,1],
-  [ "die", "Nichte", "1", "die", "Nichten" ,1],
-
-    [ "der", "Apfel", "1", "die", "Äpfel" ,2],
-  [ "der", "Jogurt", "1", "die", "Jogurts" ,2] , 
-  [ "der", "Käse", "1", "", "" ,2] , 
-  [ "der", "Saft", "1", "die", "Säfte" ,2] , 
-  [ "der", "Salat", "1", "die", "Salate" ,2] , 
-  [ "der", "Wein", "1", "", "" ,2] , 
-  [ "der", "Reis", "1", "", "" ,2] , 
-  [ "der", "Becher", "1", "die", "Becher" ,2] , //cup of yogurt
-  [ "der", "Kühlschank", "1", "die", "Kühlschänke" ,2] , 
-  [ "der", "Mensch", "1", "die", "Menschen" ,2] , 
-
-  [ "die", "Butter", "1", "", "" ,2],
-  [ "die", "Gurke", "1", "die", "Gurken" ,2] , //pepino
-  [ "die", "Milch", "1", "", "" ,2],
-  [ "die", "Wurst", "1", "die", "Würste" ,3],
-  [ "die", "Banane", "1", "die", "Bananen" ,2],
-  [ "die", "Marmelade", "1", "die", "Marmeladen" ,2],
-  [ "die", "Tomate", "1", "die", "Tomaten" ,2] , 
-  [ "die", "Kartoffel", "1", "die", "Kartoffeln" ,2] , 
-  [ "die", "Nudeln", "1", "", "" ,2] , //massa - so ha plural
-  [ "die", "Dose", "1", "die", "Dosen" ,2] , //lata
-  [ "die", "Orange", "1", "die", "Orangen" ,2] , //lata
-  [ "die", "Packung", "1", "die", "Packungen" ,2] , //Pacote - Pacote de massa
-  [ "die", "Tüte", "1", "die", "Tüten" ,2] , //saco papel - Pacote de batatas fritas
-  [ "die", "Pflanze", "1", "die", "Pflanzen" ,2] , 
-  
-  [ "das", "Ei", "1", "die", "Eier" ,2],
-  [ "das", "Fleisch", "1", "", "" ,2],
-  [ "das", "Wasser", "1", "", "" ,2],
-  [ "das", "Obst", "1", "", "" ,2] ,  //fruta
-  [ "das", "Brot", "1", "die", "Brote" ,2] ,  
-  [ "das", "Brötchen", "1", "die", "Brötchen" ,2] ,// pao pequeno
-  [ "das", "Glas", "1", "die", "Gläser" ,2] ,  
-  [ "das", "Netz", "1", "die", "Netze" ,2] , 
-  [ "das", "Stück", "1", "die", "Stücke" ,2] , 
-  [ "das", "Frühstück", "1", "die", "Frühstücke" ,2] ,
-  [ "das", "tier", "1", "die", "tiere" ,2],
-
-
-  [ "der", "Urlaub", "1", "die", "Urlaube" ,2], //Holidays
-  [ "der", "Zug", "1", "die", "Züger" ,2],
-  [ "der", "Bus", "1", "die", "Busser" ,2],
-
-  [ "die", "U-Bahn", "1", "die", "U-Bahnen" ,2],
-  [ "die", "S-Bahn", "1", "die", "S-Bahnen" ,2],
-  [ "die", "Strassenbahn", "1", "die", "Strassenbahnen" ,2],
-  [ "die", "Universität", "1", "die", "Universitäten" ,2],
-  [ "die", "Uni", "1", "die", "Unis" ,2],
-  [ "die", "Fahrt", "1", "die", "Fahrten" ,2],
-  [ "die", "Richtung", "1", "die", "Richtungen" ,2], //direction
-  [ "die", "Station", "1", "die", "Stationen" ,2], //direction
-
-  [ "das", "Flugzeug", "1", "die", "Flugzeug" ,2],
-  [ "das", "Schiff", "1", "die", "Schiffe" ,2],
-  [ "das", "fahrrad", "1", "die", "fährrader" ,2],
-  [ "das", "zimmer", "1", "die", "zimmer" ,2],
-  [ "der", "Klassenraum", "1", "die", "Klassenräume" ,2],
-
-       [ "der", "Flur", "1", "die", "Flure" ,2], //Holidays
-     [ "der", "Balkon", "1", "die", "Balkone" ,2], //Valaranda
-     [ "der", "Schlüssel", "1", "die", "Schlüssel" ,2], //Chave
-     [ "der", "Schrank", "1", "die", "Schränke" ,2], //armario
-     [ "der", "Herd", "1", "die", "Herde" ,2], //fogao
-     [ "der", "Teller", "1", "die", "Teller" ,2], //pratos
-     [ "der", "Regal", "1", "die", "Regale" ,2], //armario prateleiras
-     [ "der", "Nachbar", "1", "die", "Nachbarn" ,2], //Vizinhos
-
-     [ "die", "Matratze", "1", "die", "Matratzen" ,2], //Colchao
-     [ "die", "WG", "1", "die", "WGS" ,2],
-     [ "die", "Küche", "1", "die", "Küchen" ,2],
-     [ "die", "Ankunft", "1", "die", "Ankünfte" ,2], //Arrival
-     [ "die", "Wand", "1", "die", "Wände" ,2], //Wall
-     [ "die", "Nachbarin", "1", "die", "Nachbarinnen" ,2], //vizinha
-
-     [ "das", "Sofa", "1", "die", "Sofas" ,2],
-     [ "das", "Zentrum", "1", "", "" ,2],
-     [ "das", "Wohnzimmer", "1", "die", "Wohnzimmer" ,2],
-     [ "das", "zimmer", "1", "die", "zimmer" ,2],
-     [ "das", "Schlafzimmer", "1", "die", "Schlafzimmer" ,2],
-     [ "das", "Kinderzimmer", "1", "die", "Kinderzimmer" ,2],
-     [ "das", "Arbeitszimmer", "1", "die", "Arbeitszimmer" ,2],
-     [ "das", "Bad", "1", "die", "Bäder" ,2],
-     [ "das", "Badezimmer", "1", "die", "Badezimmer" ,2],
-     [ "das", "Erdgeschoss", "1", "die", "Erdgeschosse" ,2], //gound floor
-     [ "das", "Regal", "1", "die", "Regale" ,2], 
-     [ "das", "Angebot", "1", "die", "Angebote" ,2],  //offer anuncio
-     [ "das", "Leben", "1", "die", "Leben" ,2]  //Vida
-
-
+  [ "die", "Nichte", "1", "die", "Nichten" ,1]
 
 ];
 
 const newprompts = [
+ /* [ "der", "Film", "1", "die", "Filme" ],
+  [ "der", "Frühling", "0", "", "" ],
+  [ "der", "Sommer", "0", "", "" ],
+  [ "der", "Herbst", "0", "", "" ],
+  [ "der", "Winter", "0", "", "" ],
+  [ "der", "Tag", "1", "die", "Tage" ],
+  [ "der", "Sonntag", "1", "die", "Sonntage" ],
+  [ "der", "Donnerstag", "1", "die", "Donnerstage" ],
+  [ "der", "Freitag", "1", "die", "Freitage" ],
+  [ "der", "Samstag", "1", "die", "Samstage" ],
+  [ "der", "Dienstag", "1", "die", "Dienstage" ],
+  [ "der", "Mittwoch", "1", "die", "Mittwoche" ],
+  [ "der", "Montag", "1", "die", "Montage" ],
+  [ "der", "Freund", "1", "die", "Freunde" ],
 
-     [ "der", "Flur", "1", "die", "Flure" ,2], //Holidays
-     [ "der", "Balkon", "1", "die", "Balkone" ,2], //Valaranda
-     [ "der", "Schlüssel", "1", "die", "Schlüssel" ,2], //Chave
-     [ "der", "Schrank", "1", "die", "Schränke" ,2], //armario
-     [ "der", "Herd", "1", "die", "Herde" ,2], //fogao
-     [ "der", "Teller", "1", "die", "Teller" ,2], //pratos
-     [ "der", "Regal", "1", "die", "Regale" ,2], //armario prateleiras
-     [ "der", "Nachbar", "1", "die", "Nachbarn" ,2], //Vizinhos
+  [ "die", "Freundin", "1", "die", "Freundinnen" ],
+  [ "die", "Woche", "1", "die", "Wochen" ],
+  [ "die", "Zeit", "1", "die", "Zeiten" ],
+  [ "die", "Laute", "0", "", "" ],
 
-     [ "die", "Matratze", "1", "die", "Matratzen" ,2], //Colchao
-     [ "die", "WG", "1", "die", "WGS" ,2],
-     [ "die", "Küche", "1", "die", "Küchen" ,2],
-     [ "die", "Ankunft", "1", "die", "Ankünfte" ,2], //Arrival
-     [ "die", "Wand", "1", "die", "Wände" ,2], //Wall
-     [ "die", "Nachbarin", "1", "die", "Nachbarinnen" ,2], //vizinha
+  [ "das", "Wochenende", "1", "die", "Wochenenden" ], */
 
-     [ "das", "Sofa", "1", "die", "Sofas" ,2],
-     [ "das", "Zentrum", "1", "", "" ,2],
-     [ "das", "Wohnzimmer", "1", "die", "Wohnzimmer" ,2],
-     [ "das", "zimmer", "1", "die", "zimmer" ,2],
-     [ "das", "Schlafzimmer", "1", "die", "Schlafzimmer" ,2],
-     [ "das", "Kinderzimmer", "1", "die", "Kinderzimmer" ,2],
-     [ "das", "Arbeitszimmer", "1", "die", "Arbeitszimmer" ,2],
-     [ "das", "Bad", "1", "die", "Bäder" ,2],
-     [ "das", "Badezimmer", "1", "die", "Badezimmer" ,2],
-     [ "das", "Erdgeschoss", "1", "die", "Erdgeschosse" ,2], //gound floor
-     [ "das", "Regal", "1", "die", "Regale" ,2], 
-     [ "das", "Angebot", "1", "die", "Angebote" ,2],  //offer anuncio
-     [ "das", "Leben", "1", "die", "Leben" ,2]  //Vida
 
+  [ "der", "Ehepartner", "1", "die", "Ehepartner" ,1],
+  [ "die", "Ehepartnerin", "1", "die", "Ehepartnerinnen" ,1],
+  
+  [ "Geschwister", "Irmaos" ,2], 
+  [ "Grosseltern", "Avos", 1],
+
+  [ "Eltern", "Pais", 1],
+
+  [ "Mädchen", "Rapariga" ,1], //girl
+  [ "Knabe", "Rapaz", 1], //boy
+  
+  [ "Ausland", "Estrangeiro",1],
+
+  [ "Schwager", "Cunhado",2], //cunhado
+  [ "Schwester", "Irma",1], //cunhada
+
+  [ "Onkel", "Tio" ,1],
+  [ "Tante", "Tia",1],
+
+  [ "Schwiegervater", "Sogro",1],
+  [ "Schwiegermutter", "Sogra",1],
+
+  [ "Enkel","Neto",1],
+  [ "Enkelin","Neta",1],
+
+  [ "Neffe", "Sobrinho" ,1],
+  [ "Nichte", "Sobrinha",1],
+
+ [ "Brief","Carta" ,2], 
+ [ "Party", "Festa",1],
+ [ "Feier", "Celebracao",1],  //ferias
+
+  [ "Geschenk", "Prenda" ,1], //prenda
+  [ "Arbeitsplatz", "Local de trabalho",1],
+  [ "geld", "dinheiro",1],
+  [ "Kuchen", "Bolo" ,1]
 
 ];
 
@@ -361,16 +299,14 @@ function getRandonPrompt(pworkingPrompts)
         return weights.length - 1;
       }
 
-function showPrompt(newQuestion) {
+function showPrompt() {
   if (numCorrect === MaxQuestions) {
     alert("Congratulations! You got " + MaxQuestions + " questions in a row right!");
     document.location.URL ="google.com"
     return;
   }
 
- if (newQuestion) {
-    currentPrompt = getRandonPrompt(workingPrompts);
-  }
+  currentPrompt = getRandonPrompt(workingPrompts);
 
 
   const promptElement = document.getElementById("prompt");
@@ -395,7 +331,7 @@ function showPrompt(newQuestion) {
 
         showMessage("error", `Too slow! Time's up! You only have ` + time2Answer + ` secs`);
 
-        showPrompt(true);
+        showPrompt();
   }, time2Answer *1000);
 
   // display the time remaining
@@ -487,8 +423,6 @@ function submitAnswer() {
         }
         rigthAnswers++;
         rigthAnswersField.textContent=rigthAnswers;
-      updatePercentage();
-      showPrompt(true);
       } else {
         if (numCorrect>biggestWinningSeries) 
             biggestWinningSeries = numCorrect;
@@ -503,11 +437,10 @@ function submitAnswer() {
 
 
         showMessage("error", `Sorry, that's incorrect. The correct answer is <B>"${currentPrompt[0]} ${currentPrompt[1]} ${currentPrompt[3]} ${currentPrompt[4]}"</B>.`);
-        updatePercentage();
-        showPrompt(false);
-
+       
       }
-     
+      updatePercentage();
+      showPrompt();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -517,7 +450,7 @@ document.addEventListener("DOMContentLoaded", () => {
   newWordsButtons.addEventListener("click", tooglenewWordsButton);
 
 
-  showPrompt(true);
+  showPrompt();
 });
 
 const textBox = document.getElementById('answerInput');
